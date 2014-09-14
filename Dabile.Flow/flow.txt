@@ -1,0 +1,26 @@
+﻿<import L:ezilib.l>.gen;;
+<flow name="lsx">
+<flow.id="367" />
+
+...
+{{{
+EziGameData textures as new EziGameData("path").ToUezi();   #BOBJECT textures OBJ EziGameData-ToUezi
+
+textures.Accessor clones IPrimitive.HashTable; @#BOBJECT textures ACCESSOR CLONES PRIMITIVE.HT
+
+textures[0][1].Image.Width = 150;  #STATEMENT textures[0][1]-Image_Width ASSIGN 150
+textures[0][1].Image.Height = 125; #STATEMENT textures[0][1]-Image_Height ASSIGN 150
+textures[*][1].Image.BitDepth = 8; #STATEMENT textures[0][1]-Image_BitDepth ASSIGN 8
+
+EziGameData _textures as new EziGameData(); #BOBJECT _textures OBJ EziGameData[]
+_textures = textures.ConvertToEzi(); #_textures ASSIGN textures-ConvertToEzi
+_textures.SaveData(); #_textures-SaveData
+}}}
+
+
+<for i 0 lt textures.ArrayLength ++>:T @FLOW:367 EXE FORLOOP [i 0 lt textures-ArrayLength ++] AS THREAD[]
+{{{
+	textures[i][1].Width = 150; #textures[i][1]-Width ASSIGN 150
+}}}
+
+...
