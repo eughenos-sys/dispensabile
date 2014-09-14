@@ -81,10 +81,6 @@
     <Content Include="Content\nav.min.css">
       <DependentUpon>nav.css</DependentUpon>
     </Content>
-    <Content Include="Content\normalize.css" />
-    <Content Include="Content\normalize.min.css">
-      <DependentUpon>normalize.css</DependentUpon>
-    </Content>
     <Content Include="Content\style.css" />
     <Content Include="Content\style.min.css">
       <DependentUpon>style.css</DependentUpon>

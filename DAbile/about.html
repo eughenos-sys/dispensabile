@@ -13,44 +13,54 @@
         <div class="col-md-8 col-md-offset-2 main">
             <a href="Default.aspx" class="btn btn-info">&lt; Vai alla home</a>
             <h1>About: Dispensabile</h1><br /><h4>Dispensabile è un software di gestione dispensa realizzato in ASP.NET Web Forms (C#), MDB e Angular.js</h4><br />
-            <h4>Il software può essere hostato su Microsoft Internet Information Services 8+ oppure self-hosted in un'applicazione Console Windows tramite Open Web Interface for .net & Katana [WIP]</h4><br />
-            <h4>Angular.js è utilizzato per il two-way binding nell'interfaccia utente.</h4><br />
-            <h4>Il software non presenta autenticazione, si raccomanda quindi l'hosting in rete locale o su server privato con sistemi di autenticazione esterni.</h4>
+            <h4>Il software può essere hostato su Microsoft Internet Information Services 8+ oppure self-hosted con OWIN e Katana [work in progress]</h4><br />
+            <h4>Angular.js è utilizzato per gestire le animazioni ed una parte del routing.</h4><br />
+            <h4>To Do:</h4>
             <br />
+            <div class="col-md-4 col-md-offset-4 bloc">
+            <ul class="label-danger">Web Forms Authentication</ul>
+            <ul class="label-warning">Modifica della stampa tramite print-specific css.</ul>
+            <ul class="label-info">Animazioni e tooltips con Angular.js e bootstrap</ul>
+            <ul class="label-warning">Inserimento campo Note</ul>
+            <ul class="label-warning">Conversione db a SqLite 3 / MS SQL Server w/ Entity Framework</ul>
+        </div>
+            <br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <div class="right">
             <h3>Data Structure:</h3>
             <table class="table table-striped table-bordered .table-responsive" style="width:100%">
                 <tr>
                     <th>Nome:</th>
                     <th>Datatype:</th>
-                    <th>EntityKey:</th>
+                    <th>EKey:</th>
                 </tr>
                 <tr>
                     <td>ID</td>
-                    <td>num [A_I nn P_K]</td>
+                    <td>LongInteger [Increment, PK]</td>
                     <td>WIP</td>
                 </tr>
                 <tr>
                     <td>marca</td>
-                    <td>smalltext [nn [0 = null]]</td>
+                    <td>ShortText [Required]</td>
                     <td>WIP</td>
                 </tr>
                 <tr>
                     <td>prodotto</td>
-                    <td>smalltext [nn]</td>
+                    <td>ShortText [Required]</td>
                     <td>WIP</td>
                 </tr>
                 <tr>
                     <td>quanti</td>
-                    <td>smalltext [nn]</td>
+                    <td>ShortText [Required]</td>
                     <td>WIP</td>
                 </tr>
                 <tr>
                     <td>scadenza</td>
-                    <td>smalltext [nn]</td>
+                    <td>ShortText [Required]</td>
                     <td>WIP</td>
                 </tr>
             </table>
         </div>
+            </div>
     </div>
 </body>
 </html>

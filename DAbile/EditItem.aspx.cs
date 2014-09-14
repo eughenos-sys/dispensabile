@@ -41,12 +41,16 @@ namespace DAbile
             }
 
          else {
-                Item i = new Item();
-                i.marca = this.marca.Text;
-                i.prodotto = this.prodotto.Text;
-                i.quanti = this.quanti.Text;
-                i.scadenza = this.scadenza.Text;  
-                id_ = new ItemService().InsertItem(i);
+             Item i = new Item();
+             for (int c = 1; c < 12048; c++)
+             {
+                 i.marca = c.ToString();
+                 i.prodotto = c.ToString();
+                 i.quanti = c.ToString();
+                 i.scadenza = c.ToString();
+                 id_ = new ItemService().InsertItem(i);
+             }
+                
                 }
             Response.Redirect("Default.aspx");
             }
