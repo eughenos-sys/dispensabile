@@ -14,13 +14,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">DispensAbile 1.1.4[b]</a>
+                <a class="navbar-brand" href="#">DispensAbile 1.0.2[b]</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class=""><a class="btn btn-info btn-xs" href="EditItem.aspx">Aggiungi Item</a></li>
+                    <li class=""><a class="" href="EditItem.aspx">Aggiungi Item</a></li>
                     <li class=""><a href="slides-deck.html" target="_blank">Tutorial</a></li>
                     <li class=""><a href="javascript:window.print()">Stampa Tabella</a></li>
                     <li class=""><a href="about.html">About</a></li>
@@ -32,7 +32,8 @@
 </div>
 
 
-    <asp:GridView ID="ItemGrid" CssClass="table table-condensed" runat="server" OnRowCommand="ItemGrid_RowCommand" OnRowDeleting="ItemGrid_RowDeleting" AutoGenerateColumns="False" ClientIDMode="Static" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal">
+    <asp:GridView ID="ItemGrid" CssClass="table table-condensed" runat="server" OnRowCommand="ItemGrid_RowCommand" OnRowDeleting="ItemGrid_RowDeleting" AutoGenerateColumns="False" ClientIDMode="Static" CellPadding="4" ForeColor="#333333" GridLines="None">
+        <AlternatingRowStyle BackColor="White" ForeColor="#284775"></AlternatingRowStyle>
         <Columns>
             <asp:BoundField DataField="id" HeaderText="ID" />
             <asp:BoundField DataField="marca" HeaderText="Marca" />
@@ -47,13 +48,24 @@
                 <ItemStyle Width="300px" />
             </asp:TemplateField>
         </Columns>
-        <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
-        <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
-        <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
-        <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
-        <SortedAscendingCellStyle BackColor="#F7F7F7" />
-        <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
-        <SortedDescendingCellStyle BackColor="#E5E5E5" />
-        <SortedDescendingHeaderStyle BackColor="#242121" />
+        <EditRowStyle BackColor="#999999"></EditRowStyle>
+
+        <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White"></FooterStyle>
+
+        <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White"></HeaderStyle>
+
+        <PagerStyle HorizontalAlign="Center" BackColor="#284775" ForeColor="White"></PagerStyle>
+
+        <RowStyle BackColor="#F7F6F3" ForeColor="#333333"></RowStyle>
+
+        <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333"></SelectedRowStyle>
+
+        <SortedAscendingCellStyle BackColor="#E9E7E2"></SortedAscendingCellStyle>
+
+        <SortedAscendingHeaderStyle BackColor="#506C8C"></SortedAscendingHeaderStyle>
+
+        <SortedDescendingCellStyle BackColor="#FFFDF8"></SortedDescendingCellStyle>
+
+        <SortedDescendingHeaderStyle BackColor="#6F8DAE"></SortedDescendingHeaderStyle>
     </asp:GridView>
 </asp:Content>

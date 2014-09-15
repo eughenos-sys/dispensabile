@@ -35,7 +35,7 @@ namespace DAbile.Classes
         public int DeleteItem(int _id)
         {
             Data.DB.OleDbDatabase db = new Data.DB.OleDbDatabase();
-            string query = "DELETE FROM ITEMS HWERE id=" + _id;
+            string query = "DELETE FROM ITEMS WHERE id=" + _id;
             return db.EseguiNonQuery(query);
         }
 
@@ -55,8 +55,7 @@ namespace DAbile.Classes
                 i.prodotto = reader["prodotto"].ToString();
                 i.quanti = reader["quanti"].ToString();
                 i.scadenza = reader["scadenza"].ToString();
-                if (i.marca != "0") { li.Add(i); }
-                
+                li.Add(i);
             }
             reader.Close();
             conn.Close();
