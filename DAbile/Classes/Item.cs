@@ -11,8 +11,6 @@ namespace DAbile.Classes
         public string marca { get; set; }
         public string prodotto { get; set; }
         public string quanti { get; set; }
-        public string scadenza { get; set; }
-
-
+        public string scadenza { get; set; } 
     }
-}
+}   

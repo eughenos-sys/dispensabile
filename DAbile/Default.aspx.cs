@@ -12,9 +12,11 @@ namespace DAbile
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Page.IsPostBack) { 
             List<Item> li = new ItemService().ItemList();
             this.ItemGrid.DataSource = li;
             this.ItemGrid.DataBind();
+            }
         }
 
         protected void ItemGrid_RowCommand(object sender, GridViewCommandEventArgs e)
